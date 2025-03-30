@@ -2,28 +2,46 @@
   "name": "capstone",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "dev": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js",
-    "dev": "webpack-dev-server --config webpack.dev.js --open"
+    "start": "node src/server/server.js"
+  },
+  "jest": {
+    "transform": {},
+    "testEnvironment": "jsdom"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "css-loader": "^7.1.2",
-    "css-minimizer-webpack-plugin": "^7.0.2",
-    "mini-css-extract-plugin": "^2.9.2",
-    "sass": "^1.86.0",
-    "terser-webpack-plugin": "^5.3.14",
-    "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1",
-    "webpack-merge": "^6.0.1"
+    "axios": "^1.4.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "core-js": "^3.31.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "valid-url": "^1.0.9",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
-    "clean-webpack-plugin": "^4.0.0",
-    "html-webpack-plugin": "^5.6.3"
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "html-webpack-plugin": "^5.5.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "nodemon": "^3.1.9",
+    "sass": "^1.86.0",
+    "sass-loader": "^13.3.2",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
   }
 }

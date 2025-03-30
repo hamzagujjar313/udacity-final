@@ -1,0 +1,83 @@
+@use "sass:color";
+// Define variables for colors and fonts
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$white: #ffffff;
+$font-stack: 'Arial', sans-serif;
+
+// Basic reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-stack;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ecf0f1;
+}
+
+h2 {
+  color: $primary-color;
+  margin-bottom: 15px;
+}
+
+form {
+  background: $white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  background: $primary-color;
+  color: $white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+
+button:hover {
+  background: color.adjust($primary-color, $lightness: -10%);
+}
+
+.travel_app {
+  margin-top: 20px;
+  background: $white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+// .cityPic {
+//   width: 100%;
+//   height: 200px;
+//   background-size: cover;
+//   background-position: center;
+//   border-radius: 10px;
+//   margin-top: 10px;
+// }

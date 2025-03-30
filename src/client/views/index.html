@@ -6,6 +6,30 @@
     <title>Udacity Travel App</title>
 </head>
 <body>
-    This is body
+    <h2>Enter Destination and Travel Date</h2>
+    <form onsubmit="return Client.handleSubmit(event)">
+        <div>
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" required/>
+        </div>
+
+        <div>
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required/>
+            <div id="dateError" style="color: red; display: none;"></div>
+
+        </div>
+        <button> Submit </button>
+    </form>
+    <div class="travel_app">
+        <h2 id="remainingDays"></h2>
+        <p class="cityName"></p>
+        <p class="temp"></p>
+        <p class="wnd_spd"></p>
+        <p class="snow"></p>
+        <p class="weather"></p>
+        <div class="cityPic"></div>
+    </div>
 </body>
+
 </html>
